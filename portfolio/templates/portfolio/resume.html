@@ -1,0 +1,68 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}  {# Load the static files first #}
+
+{% block title %}Resume - Ayush's Portfolio{% endblock %}
+
+{% block content %}
+<section id="resume" class="container text-center my-5">
+    <h1 class="resume-title">Resume</h1>
+    <p class="resume-text">Download my resume  
+        <a href="{% static 'resume.pdf' %}" class="resume-link">here</a>.
+    </p>
+</section>
+
+<!-- CSS Styling -->
+<style>
+    /* General Styling */
+    body {
+        background-color: #0a192f;
+        color: #ccd6f6;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Resume Title */
+    .resume-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #64ffda;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    /* Resume Text */
+    .resume-text {
+        font-size: 1.2rem;
+        color: #a8b2d1;
+    }
+
+    /* Resume Download Link */
+    .resume-link {
+        color: #64ffda;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+    .resume-link:hover {
+        color: #ffffff;
+        text-shadow: 0 0 8px #64ffda;
+    }
+
+    /* Adding a subtle fade-in effect */
+    #resume {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+{% endblock %}
+

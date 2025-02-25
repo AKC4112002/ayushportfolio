@@ -1,0 +1,148 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}About - Ayush's Portfolio{% endblock %}
+
+{% block content %}
+<section id="about" class="container my-5">
+    <div class="row align-items-center">
+        <!-- Left Side: Text -->
+        <div class="col-md-7">
+            <h2 class="section-title">01. <span>About Me</span></h2>
+            <p class="text">
+                Hello! My name is <b>Ayush</b>, and I’m passionate about building robust and scalable backend systems.
+                My journey into development started with <b>web technologies</b>, and over time, I developed a strong
+                interest in
+                <b>data analytics and machine learning</b>.
+            </p>
+            <p class="text">
+                I specialize in <span class="highlight">backend development using Django</span>, designing APIs, and
+                managing databases efficiently.
+                Alongside development, I am also exploring <span class="highlight">data science</span>—working with
+                data-driven insights,
+                visualization, and machine learning models to solve real-world problems.
+            </p>
+            <p class="text">
+                Here are a few technologies I’ve been working with recently:
+            </p>
+
+            <!-- Tech List -->
+            <div class="row">
+                <div class="col-6">
+                    <ul class="tech-list">
+                        <li>▸ Python (Django, Flask, Pandas, NumPy)</li>
+                        <li>▸ SQL (PostgreSQL, MySQL) & NoSQL (MongoDB)</li>
+                        <li>▸ RESTful APIs & Django REST Framework (DRF)</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="tech-list">
+                        <li>▸ Data Visualization (Matplotlib, Seaborn, Power BI)</li>
+                        <li>▸ Machine Learning Basics (Scikit-learn, TensorFlow)</li>
+                        <li>▸ Version Control & Deployment (Git, GitHub, Docker)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text">
+                I’m eager to expand my expertise in backend systems and data science,
+                working on impactful projects that blend development with data analytics. 🚀
+            </p>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="col-md-5 text-center position-relative">
+            <div class="image-container">
+                <img src="{% static 'images/profile.jpg' %}" alt="Profile Picture" class="profile-img">
+                <div class="image-border"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CSS Styling -->
+<style>
+    /* General Styling */
+    body {
+        background-color: #0a192f;
+        color: #ccd6f6;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #64ffda;
+    }
+
+    .section-title span {
+        color: #ccd6f6;
+    }
+
+    /* Paragraph Text */
+    .text {
+        font-size: 1.1rem;
+        color: #a8b2d1;
+        line-height: 1.6;
+    }
+
+    /* Highlighted Words */
+    .highlight {
+        color: #64ffda;
+        font-weight: bold;
+    }
+
+    /* Tech List */
+    .tech-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .tech-list li {
+        font-size: 1rem;
+        color: #8892b0;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .tech-list li:hover {
+        color: #64ffda;
+    }
+
+    /* Profile Image */
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .profile-img {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 5px;
+        filter: grayscale(40%) brightness(0.9);
+        transition: 0.3s ease-in-out;
+    }
+
+    .image-container:hover .profile-img {
+        filter: none;
+    }
+
+    /* Image Border Effect */
+    .image-border {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #64ffda;
+        border-radius: 5px;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .image-container:hover .image-border {
+        top: -10px;
+        left: -10px;
+    }
+</style>
+{% endblock %}
