@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,7 @@
             color: #ccd6f6;
             padding-top: 80px;
         }
+
         .navbar {
             position: fixed;
             top: 0;
@@ -28,19 +30,23 @@
             z-index: 1000;
             background-color: #0a192f;
         }
+
         .nav-link {
             color: #8892b0 !important;
             font-size: 18px;
             margin-right: 20px;
             transition: color 0.3s;
         }
+
         .nav-link:hover {
             color: #64ffda !important;
         }
+
         .nav-item span {
             color: #64ffda;
             font-size: 14px;
         }
+
         .resume-btn {
             border: 1px solid #64ffda;
             color: #64ffda;
@@ -48,15 +54,23 @@
             border-radius: 4px;
             transition: all 0.3s;
         }
+
         .resume-btn:hover {
             background-color: rgba(100, 255, 218, 0.1);
         }
+
         .hexagon {
             width: 50px;
             height: 50px;
         }
+
+        .custom-home {
+            margin-top: -50px;
+            /* Adjust this value */
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -65,20 +79,23 @@
             <!-- Logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
                 <svg class="hexagon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" stroke="#64ffda" stroke-width="3" fill="none"/>
-                    <text x="50%" y="55%" text-anchor="middle" fill="#64ffda" font-size="18" font-weight="bold">AKC</text>
+                    <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" stroke="#64ffda" stroke-width="3"
+                        fill="none" />
+                    <text x="50%" y="55%" text-anchor="middle" fill="#64ffda" font-size="18"
+                        font-weight="bold">AKC</text>
                 </svg>
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><span>01.</span> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}"><span>02.</span> Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><span>03.</span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><span>03.</span> Contact</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link resume-btn" href="{% url 'resume' %}">Resume</a></li>
                 </ul>
             </div>
@@ -93,4 +110,5 @@
     <!-- Bootstrap JS (for Navbar, Modals, etc.) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
